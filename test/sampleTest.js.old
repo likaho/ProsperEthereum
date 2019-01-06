@@ -1,0 +1,26 @@
+const assert = require('assert');
+
+class Car{
+  drive(){
+    return 'vroom';
+  }
+  park(){
+    return 'park';
+  }
+}
+
+let car;
+
+beforeEach(()=>{
+  car = new Car();
+});
+
+describe('Car class', ()=>{
+  it('can park', ()=>{
+    assert.equal(car.park(), 'park');
+  });
+
+  it('can drive', ()=>{
+    assert.equal(car.drive(), 'vroom');
+  })
+});
